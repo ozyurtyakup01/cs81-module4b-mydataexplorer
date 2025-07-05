@@ -38,6 +38,7 @@ const weekData =
 function findHighestScreenTime(log)
 {
     let maxTime = null;
+    let whichDay = log[0].day;
     //iterate each element    
     for (let index of log)
     {
@@ -46,13 +47,17 @@ function findHighestScreenTime(log)
         {
             // new max time is current index
             maxTime = index.screenTime;
+            whichDay = index.day;
         }
     }
+    return whichDay + ", " + maxTime;
 }
 
-function averageSleep()
+console.log("Highest Screen time: ",findHighestScreenTime(weekData)," hours");
+
+function averageSleep(log)
 {
-    let totalSleep = null;
+    let totalSleep = 0;
     //iterate each element 
     for (let index of log)
     {
@@ -60,8 +65,10 @@ function averageSleep()
         totalSleep += index.sleepHours
     }
     //calculate average
-    return totalSleep / log.length() + totalSleep % log.length();
+    return ((totalSleep / log.length).toFixed(2));
 }
+
+console.log("Average sleep time: ",averageSleep(weekData)," hours");
 
 function mostFrequentMood()
 {
