@@ -1,16 +1,5 @@
-/*
 
-In myDataJournal.js, define an array named weekData with 7 objects, one for each day. Use your real or realistic data:
-
-day (string)
-sleepHours (number)
-screenTime (hours)
-mood (string)
-caffeineIntake (cups)
-focusLevel (1–10)
-
-*/
-
+// https://github.com/ozyurtyakup01/cs81-module4b-mydataexplorer.git
 
 /*
 Add comments in your code predicting:
